@@ -20,6 +20,7 @@
                     <td>{{ instrumento.dono }}</td>
                     <td>
                         <button><a href="{% url 'app:detalhar_objeto' pk=instrumento.pk%}">Detalhes</a></button>
+                        <button><a href="{% url 'app:deletar_objeto' pk=instrumento.pk%}">Deletar</a></button>
                     </td>
                 </tr>
             {% endfor %}
