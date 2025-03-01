@@ -65,5 +65,7 @@ def editar_objeto(request):
 def deletar_objeto(request):
     return render(request, 'app/deletar_objeto.html')
 
-def detalhar_objeto(request):
-    return render(request, 'app/detalhar_objeto.html')
+def detalhar_objeto(request, pk):
+    instrumento = Instrument.objects.get(pk=pk)
+    if instrumento:
+        return render(request, 'app/detalhar_objeto.html', {'instrumento': instrumento})
