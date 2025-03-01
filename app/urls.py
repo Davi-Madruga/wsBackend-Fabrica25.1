@@ -16,4 +16,6 @@ urlpatterns = [
     path('editar_objeto/<int:pk>', editar_objeto, name='editar_objeto'),
     path('deletar_objeto/<int:pk>', deletar_objeto, name='deletar_objeto'),
     path('detalhar_objeto/<int:pk>', detalhar_objeto, name='detalhar_objeto'),
+    #Menu
+    path('menu/', menu_view, name='menu')
 ]

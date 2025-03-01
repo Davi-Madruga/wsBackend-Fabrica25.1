@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from .models import Usuario, Instrument
 from .forms import UsuarioForm, InstrumentForm
 
+#MENU
+def menu_view(request):
+    return render(request, 'app/menu.html')
 
 #USUARIOS#
 
