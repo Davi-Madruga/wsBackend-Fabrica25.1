@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Usuário</title>
+    <title>Editar Equipamento</title>
+    <style>
+        body {
+            font-family: 'Monaco', monospace;
+            font-size: 20px;
+        }
+        button {
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Edição do Item</h1>
+    <h1>Edição do Equipamento</h1>
     <form action="{% url 'app:editar_objeto' pk=instrumento.pk %}" method="post">
         {% csrf_token %}
         {% for field in form %}
