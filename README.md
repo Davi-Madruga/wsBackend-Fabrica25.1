@@ -1,5 +1,6 @@
 # Opa, me chamo Davi, este é o meu desafio para entrar na Fábrica de Software
 
+**-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-**
 ## 📋 Sobre o Projeto<br>
 - O projeto é uma operação CRUD (Create, Read, Update, Delete) <br>
 - Onde você pode gerenciar usuários e outras entidades.
@@ -19,6 +20,7 @@
 - **Framework:** Django
 - **Banco de Dados:** SQLite
 
+**-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-**
 ## 📦 Instalação
 
 1. Clone o repositório:
@@ -41,6 +43,8 @@
    python manage.py makemigrations
    python manage.py migrate
    ```
+
+**-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-**
 ## ⚙️ Usando
 1. Inicie o servidor:
    ```sh
@@ -50,4 +54,6 @@
    ```sh
    http://127.0.0.1:8000/app/menu/
    ```
+**-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-**
 ## Obrigado Por Experimentar a Aplicação 👍
+**-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-**
