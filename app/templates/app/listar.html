@@ -25,6 +25,7 @@
                     <td>
                         <button><a href="{% url 'app:editar' pk=usuario.pk%}">Editar</a></button>
                         <button><a href="{% url 'app:deletar' pk=usuario.pk %}">Deletar</a></button>
+                        <button><a href="{% url 'app:detalhar' pk=usuario.pk %}">Detalhar</a></button>
                     </td>
                 </tr>
             {% endfor %}
@@ -32,5 +33,6 @@
     {% else %}
         <h1>Não há usuários cadastrados</h1>
     {% endif %}
+    <button><a href="{% url 'app:criar' %}">Criar Usuário</a></button>
 </body>
 </html>
