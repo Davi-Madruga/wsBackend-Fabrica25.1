@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuários</title>
+</head>
+<body>
+    {% if instrumento %}
+        <h1>Lista de Instrumentos ---- <button><a href="{% url 'app:listar'%}">Lista de Usuários</a></button></h1>
+        <table>
+            <tr> 
+                <th>Item</th>
+                <th>Dono</th>
+                <th>Ações</th>
+            </tr>
+            {% for instrumento in instrumento %}
+                <tr>
+                    <td>{{ instrumento.item }}</td>
+                    <td>{{ instrumento.dono }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <button><a href="{% url 'app:criar_objeto'%}">Criar Instrumento</a></button></h1>
+    {% else %}
+        <h1>Não há objetos cadastrados ----- <button><a href="{% url 'app:listar'%}">Lista de Usuários</a></button></h1>
+        <button><a href="{% url 'app:criar_objeto'%}">Criar Instrumento</a></button></h1>
+    {% endif %}
+</body>
+</html>
