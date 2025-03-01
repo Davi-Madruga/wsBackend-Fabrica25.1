@@ -25,7 +25,7 @@ def editar_view(request, pk):
         form = UsuarioForm(request.POST, instance=usuario)
         if form.is_valid():
             form.save()
-            return redirect('app:listar')
+            return redirect('app:detalhar', pk=pk)
 
 def deletar_view(request, pk):
     usuario = Usuario.objects.get(pk=pk)
@@ -35,5 +35,7 @@ def deletar_view(request, pk):
         usuario.delete()
         return redirect('app:listar')
 
-def detalhar_view(request):
-    return render(request, 'detalhar.html')
+def detalhar_view(request, pk):
+    usuario = Usuario.objects.get(pk=pk)
+    if usuario:
+        return render(request, 'app/detalhar.html', {'usuario': usuario})
