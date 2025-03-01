@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
-from .models import Usuario
-from .forms import UsuarioForm
+from .models import Usuario, Instrument
+from .forms import UsuarioForm, InstrumentForm
+
 
 #USUARIOS#
 
