@@ -9,7 +9,7 @@ class UsuarioForm(forms.ModelForm):
             'nome': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
             'senha': forms.PasswordInput(attrs={'class': 'form-control'}),
-            'data_nascimento': forms.DateInput(attrs={'class': 'form-control'}),
+            'data_nascimento': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
             'cpf': forms.TextInput(attrs={'class': 'form-control'}),
             'telefone': forms.TextInput(attrs={'class': 'form-control'}),
         }
