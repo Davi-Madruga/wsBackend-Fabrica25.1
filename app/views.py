@@ -1,7 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Usuario
+from .forms import UsuarioForm
 
 def criar_view(request):
-    return render(request, 'criar.html')
+    if request.method == 'GET':
+        form = UsuarioForm()
+        return render(request, 'app/criar.html', {'form': form})
+    elif request.method == 'POST':
+        form = UsuarioForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('app:listar')
 
 def listar_view(request):
     return render(request, 'listar.html')
