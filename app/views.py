@@ -54,3 +54,7 @@ def criar_objeto(request):
         if form.is_valid():
             form.save()
             return redirect('app:listar_objeto')
+        
+def listar_objeto(request):
+    instrumento = Instrument.objects.all()
+    return render(request, 'app/listar_objeto.html', {'instrumento': instrumento})
