@@ -24,6 +24,7 @@
                     <td>{{ usuario.telefone }}</td>
                     <td>
                         <button><a href="{% url 'app:editar' pk=usuario.pk%}">Editar</a></button>
+                        <button><a href="{% url 'app:deletar' pk=usuario.pk %}">Deletar</a></button>
                     </td>
                 </tr>
             {% endfor %}
