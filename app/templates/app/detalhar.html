@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes</title>
+</head>
+<body>
+    <h1>Detalhes</h1>
+    <p>Nome: {{ usuario.nome }} </p>
+    <p>Email: {{ usuario.email }} </p>
+    <p>Data de Nascimento: {{ usuario.data_nascimento }} </p>
+    <p>Telefone: {{ usuario.telefone }} </p>
+    <br>
+    <button><a href="{% url 'app:listar' %}">Voltar</a></button>
+    <button><a href="{% url 'app:editar' pk=usuario.pk %}">Editar</a></button>
+    <button><a href="{% url 'app:deletar' pk=usuario.pk %}">Deletar</a></button>    
+</body>
+</html>
