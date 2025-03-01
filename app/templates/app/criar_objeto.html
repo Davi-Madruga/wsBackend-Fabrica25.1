@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Instrumento</title>
+</head>
+<body>
+    <h1>Criar Instrumento</h1>
+    <form action="{% url 'app:criar_objeto' %}" method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            <br>
+            {{ field.label_tag }}
+            <br>
+            {{ field}}
+            <br>
+        {% endfor %}
+        <button type="submit">Salvar</button><button><a href="{% url 'app:listar_objeto'%}">Lista de Instrumentos</a></button>
+</body>
+</html>
