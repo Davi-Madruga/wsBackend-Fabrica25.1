@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deletar Usuário</title>
+</head>
+<body>
+    <h1>Deletar Instrumento</h1>
+    <form action="{% url 'app:deletar_objeto' pk=instrumento.pk %}" method="post">
+        {% csrf_token %}
+        <p>Você tem certeza que deseja deletar o instrumento: {{ instrumento.nome }}?</p>
+        <button type="submit">Deletar</button><button><a href="{% url 'app:listar_objeto' %}">Cancelar</a></button>
+    </form>
+</body>
+</html>
