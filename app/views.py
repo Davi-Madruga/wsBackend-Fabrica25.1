@@ -26,8 +26,6 @@ def editar_view(request, pk):
         if form.is_valid():
             form.save()
             return redirect('app:listar')
-        
-    return render(request, 'editar.html')
 
 def deletar_view(request):
     return render(request, 'deletar.html')
