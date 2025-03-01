@@ -13,7 +13,8 @@
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Data de Nascimento</th>
-                <th>Telefone</th>      
+                <th>Telefone</th>
+                <th>Ações</th> 
             </tr>
             {% for usuario in usuarios %}
                 <tr>
@@ -21,6 +22,9 @@
                     <td>{{ usuario.email }}</td>
                     <td>{{ usuario.data_nascimento }}</td>
                     <td>{{ usuario.telefone }}</td>
+                    <td>
+                        <button><a href="{% url 'app:editar' pk=usuario.pk%}">Editar</a></button>
+                    </td>
                 </tr>
             {% endfor %}
         </table>
