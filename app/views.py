@@ -14,7 +14,7 @@ def criar_view(request):
 
 def listar_view(request):
     usuarios = Usuario.objects.all()
-    return render(request, 'listar.html', {'usuarios': usuarios})
+    return render(request, 'app/listar.html', {'usuarios': usuarios})
 
 def editar_view(request):
     return render(request, 'editar.html')
