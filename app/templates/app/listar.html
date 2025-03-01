@@ -7,7 +7,7 @@
 </head>
 <body>
     {% if usuarios %}
-        <h1>Lista de Usuários</h1>
+        <h1>Agentes ----- <button><a href="{% url 'app:listar_objeto'%}">Equipamentos-Habilidades</a></button></h1>
         <table>
             <tr>
                 <th>Nome</th>
@@ -23,9 +23,9 @@
                     <td>{{ usuario.data_nascimento }}</td>
                     <td>{{ usuario.telefone }}</td>
                     <td>
+                        <button><a href="{% url 'app:detalhar' pk=usuario.pk %}">Detalhes</a></button>
                         <button><a href="{% url 'app:editar' pk=usuario.pk%}">Editar</a></button>
                         <button><a href="{% url 'app:deletar' pk=usuario.pk %}">Deletar</a></button>
-                        <button><a href="{% url 'app:detalhar' pk=usuario.pk %}">Detalhar</a></button>
                     </td>
                 </tr>
             {% endfor %}
@@ -33,6 +33,6 @@
     {% else %}
         <h1>Não há usuários cadastrados</h1>
     {% endif %}
-    <button><a href="{% url 'app:criar' %}">Criar Usuário</a></button>
+    <button><a href="{% url 'app:criar' %}">Cadastrar Agente</a></button>
 </body>
 </html>

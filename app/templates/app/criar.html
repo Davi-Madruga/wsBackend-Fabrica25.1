@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Usuário</title>
+    <title>Cadastrar Agente</title>
 </head>
 <body>
-    <h1>Criar Usuário</h1>
+    <h1>Cadastrar Agente</h1>
     <form action="{% url 'app:criar' %}" method="post">
         {% csrf_token %}
         {% for field in form %}
@@ -16,6 +16,7 @@
             {{ field}}
             <br>
         {% endfor %}
-        <button type="submit">Criar</button>
+        <br>
+        <button type="submit">Criar</button> <button><a href="{% url 'app:listar'%}">Agentes</a></button>
 </body>
 </html>

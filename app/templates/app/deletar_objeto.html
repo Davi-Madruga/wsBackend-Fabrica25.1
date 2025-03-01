@@ -9,8 +9,8 @@
     <h1>Deletar Instrumento</h1>
     <form action="{% url 'app:deletar_objeto' pk=instrumento.pk %}" method="post">
         {% csrf_token %}
-        <p>Você tem certeza que deseja deletar o instrumento: {{ instrumento.nome }}?</p>
-        <button type="submit">Deletar</button><button><a href="{% url 'app:listar_objeto' %}">Cancelar</a></button>
+        <p>Você tem certeza que deseja deletar o Equipamento-Habilidade:  {{ instrumento.item }} ?</p>
+        <button type="submit">Deletar</button><button><a href="{% url 'app:detalhar_objeto' pk=instrumento.pk %}">Cancelar</a></button>
     </form>
 </body>
 </html>

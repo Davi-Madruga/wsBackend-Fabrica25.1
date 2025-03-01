@@ -10,7 +10,7 @@
     <form action="{% url 'app:deletar' pk=usuario.pk %}" method="post">
         {% csrf_token %}
         <p>Você tem certeza que deseja deletar o usuário: {{ usuario.nome }}?</p>
-        <button type="submit">Deletar</button><button><a href="{% url 'app:listar' %}">Cancelar</a></button>
+        <button type="submit">Deletar</button><button><a href="{% url 'app:detalhar' pk=usuario.pk %}">Cancelar</a></button>
     </form>
 </body>
 </html>

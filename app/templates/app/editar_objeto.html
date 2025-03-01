@@ -17,7 +17,7 @@
             <br>
         {% endfor %}
         <br>
-        <button type="submit">Atualizar</button><button><a href="{% url 'app:listar_objeto'%}">Voltar</a></button></h1>
+        <button type="submit">Atualizar</button><button><a href="{% url 'app:detalhar_objeto' pk=instrumento.pk%}">Voltar</a></button></h1>
     </form>
 </body>
 </html>

@@ -6,10 +6,12 @@
     <title>Detalhes</title>
 </head>
 <body>
-    <h1>Detalhes</h1>
+    <h1>Equipamentos-Habilidades</h1>
     <p>Nome: {{ instrumento.item }} </p>
     <p>Descrição: {{ instrumento.descricao }} </p>
     <p>Dono: {{ instrumento.dono }} </p>
     <button><a href="{% url 'app:listar_objeto' %}">Voltar</a></button>
+    <button><a href="{% url 'app:editar_objeto' pk=instrumento.pk %}">Editar</a></button>
+    <button><a href="{% url 'app:deletar_objeto' pk=instrumento.pk %}">Deletar</a></button>   
 </body>
 </html>
