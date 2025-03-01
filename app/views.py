@@ -58,3 +58,12 @@ def criar_objeto(request):
 def listar_objeto(request):
     instrumento = Instrument.objects.all()
     return render(request, 'app/listar_objeto.html', {'instrumento': instrumento})
+
+def editar_objeto(request):
+    return render(request, 'app/editar_objeto.html')
+
+def deletar_objeto(request):
+    return render(request, 'app/deletar_objeto.html')
+
+def detalhar_objeto(request):
+    return render(request, 'app/detalhar_objeto.html')
