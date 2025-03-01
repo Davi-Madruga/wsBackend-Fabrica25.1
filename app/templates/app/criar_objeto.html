@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Equipamento</title>
     <style>
+        html {background-color: #929292;
+            text-align: center;}
         body {
             font-family: 'Monaco', monospace;
             font-size: 20px;
         }
         button {
             font-size: 20px;
+            background-color: #b8b7b7;
         }
+        form{
+            background-color: #b8b7b7;
+            border-radius: 1000px;
+            }
     </style>
 </head>
 <body>
@@ -25,6 +32,9 @@
             {{ field}}
             <br>
         {% endfor %}
-        <button type="submit">Salvar</button><button><a href="{% url 'app:listar_objeto'%}">Lista de Instrumentos</a></button>
-</body>
+        <br>
+        <button type="submit">Salvar</button><br><br>
+        <button><a href="{% url 'app:listar_objeto'%}">Lista de Instrumentos</a></button>
+        <br><br>
+    </body>
 </html>

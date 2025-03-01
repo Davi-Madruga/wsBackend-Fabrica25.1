@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD</title>
     <style>
+        html {background-color: #929292;}
         body {
             font-family: 'Monaco', monospace;
             font-size: 20px;
         }
         button {
             font-size: 20px;
+            background-color: #b8b7b7;
         }
     </style>
 </head>
@@ -24,6 +26,8 @@
         vazamento de informações. <br>
     </h3>
     
-    <button><a href="{% url 'app:criar' %}">Cadastrar Agente</a></button>
+    <button><a href="{% url 'app:criar' %}">Cadastrar Agente</a></button><br><br>
+    <button><a href="{% url 'app:listar' %}">Lista de Agentes</a></button><br><br>
+    <button><a href="{% url 'app:listar_objeto' %}">Lista de Equipamentos</a></button><br><br>
 </body>
 </html>

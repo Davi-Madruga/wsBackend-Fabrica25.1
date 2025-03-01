@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Agente</title>
     <style>
+        html {background-color: #929292;
+            text-align: center;}
         body {
             font-family: 'Monaco', monospace;
             font-size: 20px;
         }
         button {
             font-size: 20px;
+            background-color: #b8b7b7;
         }
+        form{
+            background-color: #b8b7b7;
+            border-radius: 1000px;
+            }
     </style>
 </head>
 <body>
@@ -27,5 +34,6 @@
         {% endfor %}
         <br>
         <button type="submit">Criar</button> <button><a href="{% url 'app:listar'%}">Agentes</a></button>
+        <br><br>
 </body>
 </html>

@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuários</title>
     <style>
+        html {background-color: #929292;}
         body {
             font-family: 'Monaco', monospace;
             font-size: 20px;
         }
         button {
             font-size: 20px;
+            background-color: #b8b7b7;
         }
     </style>
 </head>
 <body>
     {% if usuarios %}
-        <h1>Agentes ----- <button><a href="{% url 'app:listar_objeto'%}">Equipamentos-Habilidades</a></button></h1>
+        <h1>
+            Agentes ----- 
+            <button><a href="{% url 'app:listar_objeto'%}">Equipamentos-Habilidades</a></button> 
+            <button><a href="{% url 'app:menu'%}">Menu</a></button>
+        </h1>
         <table>
             <tr>
                 <th>Nome</th>

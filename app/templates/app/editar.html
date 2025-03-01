@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Agente</title>
     <style>
+        html {background-color: #929292;
+            text-align: center;}
         body {
             font-family: 'Monaco', monospace;
             font-size: 20px;
         }
         button {
             font-size: 20px;
+            background-color: #b8b7b7;
         }
+        form{
+            background-color: #b8b7b7;
+            border-radius: 1000px;
+            }
     </style>
 </head>
 <body>
@@ -26,7 +33,9 @@
             <br>
         {% endfor %}
         <br>
-        <button type="submit">Atualizar</button><button><a href="{% url 'app:detalhar' pk=usuario.pk%}">Voltar</a></button>
+        <button type="submit">Atualizar</button><br><br>
+        <button><a href="{% url 'app:detalhar' pk=usuario.pk%}">Voltar</a></button>
+        <br><br>
     </form>
 </body>
 </html>
