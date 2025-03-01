@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from .models import Usuario
 from .forms import UsuarioForm
 
+#USUARIOS#
+
 def criar_view(request):
     if request.method == 'GET':
         form = UsuarioForm()
@@ -39,3 +41,15 @@ def detalhar_view(request, pk):
     usuario = Usuario.objects.get(pk=pk)
     if usuario:
         return render(request, 'app/detalhar.html', {'usuario': usuario})
+
+#INSTRUMENTS/OBJETOS#
+
+def criar_objeto(request):
+    if request.method == 'GET':
+        form = InstrumentForm()
+        return render(request, 'app/criar_objeto.html', {'form': form})
+    elif request.method == 'POST':
+        form = InstrumentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('app:listar_objeto')
