@@ -59,8 +59,16 @@ def listar_objeto(request):
     instrumento = Instrument.objects.all()
     return render(request, 'app/listar_objeto.html', {'instrumento': instrumento})
 
-def editar_objeto(request):
-    return render(request, 'app/editar_objeto.html')
+def editar_objeto(request, pk):
+    instrumento = Instrument.objects.get(pk=pk)
+    if request.method == 'GET':
+        form = InstrumentForm(instance=instrumento)
+        return render(request, 'app/editar_objeto.html', {'form': form, 'instrumento': instrumento})
+    elif request.method == 'POST':
+        form = InstrumentForm(request.POST, instance=instrumento)
+        if form.is_valid():
+            form.save()
+            return redirect('app:detalhar_objeto', pk=pk)
 
 def deletar_objeto(request, pk):
     instrumento = Instrument.objects.get(pk=pk)
