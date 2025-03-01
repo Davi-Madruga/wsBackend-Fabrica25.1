@@ -22,3 +22,17 @@ class UsuarioForm(forms.ModelForm):
             'telefone': 'Telefone',
         }
         
+class InstrumentForm(forms.ModelForm):
+    class Meta:
+        model = Instrument
+        fields = ['item', 'descricao', 'dono']
+        widgets = {
+            'item': forms.TextInput(attrs={'class': 'form-control'}),
+            'descricao': forms.TextInput(attrs={'class': 'form-control'}),
+            'dono': forms.Select(attrs={'class': 'form-control'}),
+        }
+        labels = {
+            'item': 'Item',
+            'descricao': 'Descrição',
+            'dono': 'Dono'
+        }
