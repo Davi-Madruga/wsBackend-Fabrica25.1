@@ -27,8 +27,13 @@ def editar_view(request, pk):
             form.save()
             return redirect('app:listar')
 
-def deletar_view(request):
-    return render(request, 'deletar.html')
+def deletar_view(request, pk):
+    usuario = Usuario.objects.get(pk=pk)
+    if request.method == 'GET':
+        return render(request, 'app/deletar.html', {'usuario': usuario})
+    elif request.method == 'POST':
+        usuario.delete()
+        return redirect('app:listar')
 
 def detalhar_view(request):
     return render(request, 'detalhar.html')
