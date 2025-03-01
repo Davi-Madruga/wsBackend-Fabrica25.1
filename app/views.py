@@ -62,8 +62,13 @@ def listar_objeto(request):
 def editar_objeto(request):
     return render(request, 'app/editar_objeto.html')
 
-def deletar_objeto(request):
-    return render(request, 'app/deletar_objeto.html')
+def deletar_objeto(request, pk):
+    instrumento = Instrument.objects.get(pk=pk)
+    if request.method == 'GET':
+        return render(request, 'app/deletar_objeto.html', {'instrumento': instrumento})
+    elif request.method == 'POST':
+        instrumento.delete()
+        return redirect('app:listar_objeto')
 
 def detalhar_objeto(request, pk):
     instrumento = Instrument.objects.get(pk=pk)
