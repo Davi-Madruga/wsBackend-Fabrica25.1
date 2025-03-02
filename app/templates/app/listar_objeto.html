@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipamentos-Habilidades</title>
+    <title>Lista de Equipamentos</title>
     <style>
         html {background-color: #929292;}
         body {
@@ -19,7 +19,7 @@
 <body>
     {% if instrumento %}
         <h1>
-            Equipamentos-Habilidades ---- 
+            Equipamentos ---- 
             <button><a href="{% url 'app:listar'%}">Agentes</a></button>
             <button><a href="{% url 'app:menu'%}">Menu</a></button>
         </h1>
@@ -42,14 +42,14 @@
             {% endfor %}
         </table>
         <br>
-        <button><a href="{% url 'app:criar_objeto'%}">Cadastrar Equipamentos-Habilidades</a></button></h1>
+        <button><a href="{% url 'app:criar_objeto'%}">Cadastrar Equipamentos</a></button></h1>
     {% else %}
         <h1>
-            Não há objetos cadastrados -----
+            Não há Equipamentos cadastrados -----
             <button><a href="{% url 'app:listar'%}">Agentes</a></button>
             <button><a href="{% url 'app:menu'%}">Menu</a></button>
         </h1>
-        <button><a href="{% url 'app:criar_objeto'%}">Cadastrar Equipamentos-Habilidades</a></button></h1>
+        <button><a href="{% url 'app:criar_objeto'%}">Cadastrar Equipamentos</a></button></h1>
     {% endif %}
 </body>
 </html>

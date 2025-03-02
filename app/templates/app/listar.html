@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Usuários</title>
+    <title>Lista de Agentes</title>
     <style>
         html {background-color: #929292;}
         body {
@@ -20,7 +20,7 @@
     {% if usuarios %}
         <h1>
             Agentes ----- 
-            <button><a href="{% url 'app:listar_objeto'%}">Equipamentos-Habilidades</a></button> 
+            <button><a href="{% url 'app:listar_objeto'%}">Equipamentos</a></button> 
             <button><a href="{% url 'app:menu'%}">Menu</a></button>
         </h1>
         <table>
@@ -47,8 +47,8 @@
         </table>
     {% else %}
         <h1>
-            Não há usuários cadastrados ----- 
-            <button><a href="{% url 'app:listar_objeto'%}">Equipamentos-Habilidades</a></button>
+            Não há Agentes cadastrados ----- 
+            <button><a href="{% url 'app:listar_objeto'%}">Equipamentos</a></button>
             <button><a href="{% url 'app:menu'%}">Menu</a></button>
         </h1>
             
